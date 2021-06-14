@@ -1,0 +1,273 @@
+{
+	"info": {
+		"_postman_id": "9c6ecee9-2c3f-4b5e-8a8a-d10605c1c96e",
+		"name": "Kamashev",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "NewFootballer",
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": false
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"FullName\": \"Mario Dembele\",\r\n    \"Age\": 24,\r\n    \"Img\": \"http\",\r\n    \"Position\": \"forward\",\r\n    \"TeamID\": 2,\r\n    \"Nationality\": \"France\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Footballers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Footballers"
+					]
+				},
+				"description": "Добавление нового футболиста"
+			},
+			"response": []
+		},
+		{
+			"name": "GetFootballer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Footballers",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Footballers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditFootballer",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 29,\r\n    \"FullName\": \"Koke\",\r\n    \"Age\": 29,\r\n    \"Img\": \"http\",\r\n    \"Position\": \"midskipper\",\r\n    \"TeamID\": 2,\r\n    \"Nationality\": \"Spain\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Footballers/29",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Footballers",
+						"29"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteFootballer",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Footballers/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Footballers",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "NewTeam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"Atletico Madrid\",\r\n    \"Logo\": \"imagepath\",\r\n    \"Games\": 34,\r\n    \"Score\": 70\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Teams",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetTeam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/teams",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"teams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EditTeam",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ID\": 4,\r\n    \"Name\": \"Sevilia\",\r\n    \"Logo\": \"imagepath2\",\r\n    \"Games\": 34,\r\n    \"Score\": 67\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/teams/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"teams",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTeam",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/teams/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"teams",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Footballers<21",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/api/Footballers/age",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Footballers",
+						"age"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetFootballersWithTeam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "GetFootballersOneTeam",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "GetFootballersInPosition",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "GetSortingTeamsByScore",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
